@@ -27,6 +27,7 @@ jason_bourne = media.Movie("Jason Bourne",
 
 movies = [toy_story, the_matrix, red, jason_bourne]
 # fresh_tomatoes.open_movies_page(movies)
+print(the_matrix.title)
 print(media.Movie.__doc__)
 print(media.Movie.__name__)
 print(media.Movie.__module__)
