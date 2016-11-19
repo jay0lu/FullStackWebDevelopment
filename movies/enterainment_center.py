@@ -25,7 +25,8 @@ jason_bourne = media.Movie("Jason Bourne",
                    "https://upload.wikimedia.org/wikipedia/en/8/8b/Jason_Bourne_soundtrack_cover.jpg",
                    "https://www.youtube.com/watch?v=F4gJsKZvqE4")
 
-print(red.poster_image_url)
-
 movies = [toy_story, the_matrix, red, jason_bourne]
-fresh_tomatoes.open_movies_page(movies)
+# fresh_tomatoes.open_movies_page(movies)
+print(media.Movie.__doc__)
+print(media.Movie.__name__)
+print(media.Movie.__module__)
