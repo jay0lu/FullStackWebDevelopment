@@ -43,6 +43,7 @@ crouching_tiger_hidden_dragon = media.Movie("Crouching Tiger Hidden Dragon",
 
 movies = [toy_story, the_matrix, red, jason_bourne, crouching_tiger_hidden_dragon]
 # fresh_tomatoes.open_movies_page(movies)
+# print(the_matrix.title)
 # print(media.Movie.__doc__)
 # print(media.Movie.__name__)
 # print(media.Movie.__module__)
