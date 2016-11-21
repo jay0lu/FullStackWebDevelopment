@@ -1,11 +1,13 @@
 import media
 import fresh_tomatoes
 
+'''
+creating movies details
+'''
 toy_story = media.Movie("Toy Story",
                         "A story of a boy and his toys that come to life",
                         "http://static.rogerebert.com/uploads/movie/movie_poster/toy-story-1995/large_agy8DheVu5zpQFbXfAdvYivF2FU.jpg",
                         "https://www.youtube.com/watch?v=KYz2wyBy3kc")
-# print(toy_story.storyline)
 
 the_matrix = media.Movie("The Matrix",
                          "A programmer is brought back to reason and reality "
@@ -15,9 +17,6 @@ the_matrix = media.Movie("The Matrix",
                          "many enemies by using technologies and self-trust.",
                          "https://upload.wikimedia.org/wikipedia/en/c/c1/The_Matrix_Poster.jpg",
                          "https://www.youtube.com/watch?v=m8e-FF8MsqU")
-
-# print(the_matrix.storyline)
-# the_matrix.show_trailer()
 
 red = media.Movie("Red",
                   "When his peaceful life is threatened by a high-tech assassin,"
@@ -41,9 +40,7 @@ crouching_tiger_hidden_dragon = media.Movie("Crouching Tiger Hidden Dragon",
                                             "https://upload.wikimedia.org/wikipedia/zh/6/65/Crouching_tiger_hidden_dragon.jpg",
                                             "https://www.youtube.com/watch?v=gLpZ_5bHmo8")
 
+# create a list to list all the movies that display
 movies = [toy_story, the_matrix, red, jason_bourne, crouching_tiger_hidden_dragon]
-# fresh_tomatoes.open_movies_page(movies)
-# print(the_matrix.title)
-# print(media.Movie.__doc__)
-# print(media.Movie.__name__)
-# print(media.Movie.__module__)
+# use fresh tomatoes to create html files and open in browser
+fresh_tomatoes.open_movies_page(movies)
