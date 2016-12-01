@@ -42,5 +42,19 @@ crouching_tiger_hidden_dragon = media.Movie("Crouching Tiger Hidden Dragon",
 
 # create a list to list all the movies that display
 movies = [toy_story, the_matrix, red, jason_bourne, crouching_tiger_hidden_dragon]
+<<<<<<< HEAD
 # use fresh tomatoes to create html files and open in browser
 fresh_tomatoes.open_movies_page(movies)
+=======
+# fresh_tomatoes.open_movies_page(movies)
+<<<<<<< HEAD
+print(the_matrix.title)
+print(media.Movie.__doc__)
+print(media.Movie.__name__)
+print(media.Movie.__module__)
+=======
+# print(media.Movie.__doc__)
+# print(media.Movie.__name__)
+# print(media.Movie.__module__)
+>>>>>>> refs/remotes/origin/PCbranch
+>>>>>>> refs/remotes/origin/master
