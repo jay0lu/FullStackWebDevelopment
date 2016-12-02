@@ -9,5 +9,19 @@ To install Python3:
 
 The html page is dynamically generated from a Python data structure. The movie data contains ``` title, movie_storyline, poster_image, trailer_youtube```
 
+
+### Run
+To view the code, first download the file.
+
+Open terminal/command, go to your file.
+```cd 'file path'```
+
+Then run the _enterainment_center.py_
+```python enterainment_center.py```
+
+It will generate the html file and open it in a browser automatically.
+
+
+
 ### License
 My code is released under the [MIT license](https://en.wikipedia.org/wiki/MIT_License).
