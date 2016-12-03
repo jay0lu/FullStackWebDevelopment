@@ -2,53 +2,123 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/main.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <title>Favorite App</title>
   </head>
   <body>
-    <h1 class="title">My App</h1>
-    <div class="app">
-      <div class="screenshot">
-        <img src="image/app.png" alt="This is a screenshot">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img class="title-logo" src="http://placehold.it/150x150" alt="website logo">
+        </div>
+        <div class="col-md-6 text-right text-uppercase">
+          <h1 class="title-super text-thin">Name</h1>
+          <h4>Font-end Ninja</h4>
+        </div>
       </div>
-      <div class="description">
-        <p>
-          In ac ipsum quis turpis adipiscing commodo. <em>Mauris fermentum quam</em> in risus eleifend fringilla. Aliquam placerat, ipsum sit amet cursus rhoncus, augue mi tincidunt erat, et consequat velit massa a velit. Cras eleifend lectus nec diam ornare, eu placerat mi ultricies. Etiam tempor iaculis feugiat. Ut tincidunt tempus libero non convallis. Morbi consequat eros eget elit porta porta. Curabitur placerat eros dui, vitae lobortis sapien laoreet ac. Maecenas a lacus diam. Morbi ante lectus, ornare sed suscipit at, tempus elementum purus. Suspendisse sodales hendrerit pharetra. Integer odio risus, convallis eu egestas ad, venatis nec leo. ac ipsum quis turpis adipiscing commodo. <em>Mauris fermentum quam</em> in risus eleifend fringilla. <a href="#">Aliquam placerat</a>, ipsum sit amet cursus rhoncus, augue mi tincidunt erat, et consequat velit massa a velit. Cras eleifend lectus nec diam ornare, eu placerat mi ultricies. Etiam tempor iaculis feugiat. Ut tincidunt tempus libero non convallis. Morbi consequat eros eget elit porta porta. Curabitur placerat eros dui, vitae lobortis sapien laoreet ac. Maecenas a lacus diam. Morbi ante lectus, ornare sed suscipit at, tempus elementum purus. Suspendisse sodales hendrerit pharetra. Integer odio risus, convallis eu egestas ac, venenatis nec leo.
-        </p>
+      <div class="row">
+        <div class="col-md-12">
+          <hr>
+        </div>
       </div>
+      <div class="row">
+        <div class="col-md-12">
+          <img class="img-responsive" src="http://placehold.it/1150x450" alt="big image">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h2 class="text-muted">Feature Work</h2>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <img class="img-responsive sub-image" data-toggle="modal" data-target="#appify1" src="http://placehold.it/250x250" alt="feature works">
+          <h3 class="text-uppercase">Appify1</h3>
+          <p>https link</p>
+        </div>
+        <div class="col-md-4">
+          <img class="img-responsive sub-image" data-toggle="modal" data-target="#appify2" src="http://placehold.it/250x250" alt="feature works">
+          <h3 class="text-uppercase">Appify2</h3>
+          <p>https link</p>
+        </div>
+        <div class="col-md-4">
+          <img class="img-responsive sub-image" data-toggle="modal" data-target="#appify3" src="http://placehold.it/250x250" alt="feature works">
+          <h3 class="text-uppercase">Appify3</h3>
+          <p>https link</p>
+        </div>
+      </div>
+
     </div>
 
 
-    <div class="grid">
-      <div class="row">
-        <div class="col-2">
-          <img src="http://placehold.it/100x100" alt="">
-        </div>
-        <div class="col-10">
-          10 columns
-        </div>
+<!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Launch demo modal
+</button> -->
+
+<!-- bootstrap Modal -->
+<!-- modal 1 -->
+<div class="modal fade" id="appify1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
       </div>
-      <div class="row">
-        <div class="col-3">
-          3 columns
-        </div>
-        <div class="col-9">
-          9 columns
-        </div>
+      <div class="modal-body">
+        ...
       </div>
-      <div class="row">
-        <div class="col-4">
-          4 columns
-        </div>
-        <div class="col-4">
-          4 columns
-        </div>
-        <div class="col-4">
-          4 columns
-        </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
       </div>
     </div>
+  </div>
+</div>
+<!-- modal 2 -->
+<div class="modal fade" id="appify2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- modal 3 -->
+<div class="modal fade" id="appify3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
 
   </body>
 </html>

@@ -1,23 +1,23 @@
-* {
-   outline: 1px solid red !important;
+body {
+  font-family: 'Lato', sans-serif;
+  color: #747704;
+  font-weight: 300;
 }
 
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    box-sizing: border-box;
+.text-muted {
+  color: #BCBBBB;
+}
+.text-thin {
+  font-weight: 100;
+}
+.title-super {
+  font-size: 60px;
 }
 
-.description {
-  max-width: 705px;
+.title-logo {
+  margin-top: 20px;
 }
 
-.image {
-  max-width: 460px;
-}
-
-.app {
-  display: -webkit-flex;
-  display: flex;
+.sub-image {
+  margin: auto;
 }
