@@ -13,6 +13,45 @@
 # limitations under the License.
 
 import webapp2
+import valid_input
+
+# months = ['January',
+#           'February',
+#           'March',
+#           'April',
+#           'May',
+#           'June',
+#           'July',
+#           'August',
+#           'September',
+#           'October',
+#           'November',
+#           'December']
+#
+# # def valid_month(month):
+# #     if month.title() in months:
+# #         return month.title()
+# #     else:
+# #         return None
+#
+# month_abbvs = dict((m[:3].lower(), m) for m in months)
+#
+# def valid_short_month(month):
+#     if month:
+#         short_month = month[:3].lower
+#         return month_abbvs.get(short_month)
+#
+# def valid_day(day):
+#     if day and day.isdigit():
+#         day = int(day)
+#         if day > 0 and day < 32:
+#             return day
+#
+# def valid_year(year):
+#     if year and year.isdigit():
+#         year = int(year)
+#         if year > 1900 and year < 2021:
+#             return year
 
 
 form="""
@@ -43,7 +82,17 @@ class MainPage(webapp2.RequestHandler):
         self.response.out.write(form)
 
     def post(self):
-        self.response.out.write("Thanks! That is a totally balid day!")
+        user_month = valid_input.valid_short_month(self.request.get('month'))
+        user_day = valid_input.valid_day(self.request.get('day'))
+        user_year = valid_input.valid_year(self.request.get('year'))
+
+        if not(user_year and user_day and user_month):
+            self.response.out.write(form)
+        else:
+            self.response.out.write("Thanks! That is a valid day.")
+
+
+
 
 # class TestHandler(webapp2.RequestHandler):
 #     def post(self):
