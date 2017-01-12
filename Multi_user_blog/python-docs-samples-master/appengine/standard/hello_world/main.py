@@ -14,6 +14,7 @@
 
 import webapp2
 import valid_input
+import escape_html
 
 
 form="""
@@ -47,10 +48,10 @@ class MainPage(webapp2.RequestHandler):
 
     # (error="") default variable is ""
     def write_form(self, error="", month="", day="", year=""):
-        self.response.out.write(form % {'error':error,
-                                        'month':month,
-                                        'day':day,
-                                        'year':year})
+        self.response.out.write(form % {'error': error,
+                                        'month': escape_html.escape_string(month),
+                                        'day': escape_html.escape_string(day),
+                                        'year': escape_html.escape_string(year)})
 
     def get(self):
         self.write_form()
@@ -68,19 +69,17 @@ class MainPage(webapp2.RequestHandler):
             self.write_form("That doesn't look valid to me!",
                             user_month, user_day, user_year)
         else:
-            self.response.out.write("Thanks! That is a valid day.")
+            self.redirect("/thanks")
+
+class ThanksHandler(webapp2.RequestHandler):
+
+    def get(self):
+        self.response.out.write("Thanks! That is a valid day.")
 
 
 
-# class TestHandler(webapp2.RequestHandler):
-#     def post(self):
-#         q = self.request.get("q")
-#         self.response.out.write(q)
-#
-#         # self.response.headers['Content-Type'] = 'text/plain'
-#         # self.response.out.wirte(self.request)
 
 app = webapp2.WSGIApplication([
     ('/', MainPage),
-    # ('/testform', TestHandler)
-], debug=True)
+    ('/thanks', ThanksHandler),
+    ], debug=True)
