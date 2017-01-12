@@ -13,15 +13,10 @@ months = ['January',
           'November',
           'December']
 
-def valid_month(month):
-    if month.title() in months:
-        return month.title()
-    else:
-        return None
 
 month_abbvs = dict((m[:3].lower(), m) for m in months)
 
-def valid_short_month(month):
+def valid_month(month):
     if month:
         short_month = month[:3].lower()
         return month_abbvs.get(short_month)
