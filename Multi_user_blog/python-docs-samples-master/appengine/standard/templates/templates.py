@@ -41,7 +41,7 @@ shopping_list_html = """
 """
 
 class Handler(webapp2.RequestHandler):
-    """docstring for handler."""
+    """docstring for handler. handler"""
     def write(self, *a, **kw):
         self.response.out.write(*a, **kw)
 
