@@ -22,6 +22,7 @@ form_html="""
       <button>Add</button>
     </form>
 """
+
 hidden_html = """
     <input type="hidden" name="food" value="%s">
 """
