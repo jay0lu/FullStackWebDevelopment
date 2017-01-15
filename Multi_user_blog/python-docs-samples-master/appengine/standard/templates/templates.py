@@ -46,7 +46,7 @@ class Handler(webapp2.RequestHandler):
         self.response.out.write(*a, **kw)
 
 
-class MainPage(webapp2.RequestHandler):
+class MainPage(Handler):
     def get(self):
         output = form_html
         output_hidden = ""
