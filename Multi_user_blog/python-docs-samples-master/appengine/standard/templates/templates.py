@@ -40,10 +40,10 @@ shopping_list_html = """
     </ul>
 """
 
-class handler(webapp2.RequestHandler):
+class Handler(webapp2.RequestHandler):
     """docstring for handler."""
     def write(self, *a, **kw):
-        self.response.outwrite(*a, **kw)
+        self.response.out.write(*a, **kw)
 
 
 class MainPage(webapp2.RequestHandler):
