@@ -6,3 +6,7 @@ handlers:
 - url: /.*
   # script: main.app
   script: templates.app
+
+libraries:
+- name: jinja2
+  versidon: latest
