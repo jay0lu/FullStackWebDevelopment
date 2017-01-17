@@ -9,4 +9,4 @@ handlers:
 
 libraries:
 - name: jinja2
-  versidon: latest
+  version: latest
