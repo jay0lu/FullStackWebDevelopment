@@ -1,3 +1,5 @@
+""" docstring """
+
 # Copyright 2016 Google Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -11,12 +13,13 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
 import os
 
 import jinja2
 import webapp2
 
-form_html="""
+form_html = """
     <form>
       <h2>Add a Food</h2>
       <input type="text" name="food">
@@ -42,6 +45,7 @@ shopping_list_html = """
     </ul>
 """
 
+
 class Handler(webapp2.RequestHandler):
     """docstring for handler. handler"""
     def write(self, *a, **kw):
@@ -66,6 +70,7 @@ class MainPage(Handler):
         output = output % output_hidden
 
         self.write(output)
+
 
 app = webapp2.WSGIApplication([
     ('/', MainPage),
