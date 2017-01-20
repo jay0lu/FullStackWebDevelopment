@@ -21,6 +21,9 @@ import os
 import jinja2
 import webapp2
 
+import rot13
+
+
 template_dir = os.path.join(os.path.dirname(__file__), 'templates')
 jinja_env = jinja2.Environment(loader=jinja2.FileSystemLoader(template_dir),
                                autoescape=True)
@@ -50,19 +53,20 @@ class FizzBuzzHandler(Handler):
         n = self.request.get('n', 0)
         n = n and int(n)
         '''equals to
-        if n:
-            n = int(n)
+                    if n:
+                        n = int(n)
         '''
         self.render("fizzbuzz.html", n=n)
 
 
 class Rot13Handler(Handler):
     def get(self):
-        text = self.request.get('text')
-        self.render("rot13.html", text=text)
+        self.render("rot13.html")
 
     def post(self):
-        pass
+        text = self.request.get('text')
+        text = str(text)
+        self.render("rot13.html", text=rot13.rot13Trans(text))
 
 
 app = webapp2.WSGIApplication([('/', MainPage),
