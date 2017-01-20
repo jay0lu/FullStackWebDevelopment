@@ -14,7 +14,7 @@ def rot13Trans(text):
 # print(rot13Trans(',<>abc'))
 
 '''
-# For python3.5
+# For python3.5 
 def rot13Trans(text):
     rot13 = str.maketrans(
         "ABCDEFGHIJKLMabcdefghijklmNOPQRSTUVWXYZnopqrstuvwxyz",
