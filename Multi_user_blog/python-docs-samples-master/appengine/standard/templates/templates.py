@@ -74,7 +74,11 @@ class SignupHandler(Handler):
         self.render("signup.html")
 
     def post(self):
-        pass
+        username = self.request.get('username')
+        password = self.request.get('password')
+        verify = self.request.get('verify')
+        email = self.request.get('email', None)
+        self.render("signup.html", username, email, )
 
 
 app = webapp2.WSGIApplication([('/', MainPage),
