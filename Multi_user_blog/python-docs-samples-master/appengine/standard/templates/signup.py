@@ -14,5 +14,5 @@ def valid_password(password):
 def valid_email(email):
     return EMAIL_RE.match(email)
 
-def password_recheck(password, verify):
+def password_retype(password, verify):
     return password == verify
