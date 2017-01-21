@@ -22,6 +22,7 @@ import jinja2
 import webapp2
 
 import rot13
+import signup
 
 
 template_dir = os.path.join(os.path.dirname(__file__), 'templates')
@@ -74,11 +75,21 @@ class SignupHandler(Handler):
         self.render("signup.html")
 
     def post(self):
-        username = self.request.get('username')
+        username = self.request.get('username', None)
         password = self.request.get('password')
         verify = self.request.get('verify')
         email = self.request.get('email', None)
-        self.render("signup.html", username, email, )
+        username_verify = signup.valid_username(username)
+        password_verify = signup.valid_password(password)
+        email_verify = signup.valid_email(email)
+        retype_password = signup.password_retype(password, verify)
+        
+        self.render("signup.html", username,
+                                   email,
+                                   username_verify,
+                                   password_verify,
+                                   email_verify,
+                                   retype_password)
 
 
 app = webapp2.WSGIApplication([('/', MainPage),

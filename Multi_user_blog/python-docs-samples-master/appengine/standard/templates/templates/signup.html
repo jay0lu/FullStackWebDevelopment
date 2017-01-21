@@ -11,10 +11,10 @@
                         Username
                     </td>
                     <td>
-                        <input type="text" name="username">
+                        <input type="text" name="username" value="{{username}}">
                     </td>
                     <td class="error">
-                        {{username_err}}
+                        {{username_verify}}
                     </td>
                 </tr>
                 <tr>
@@ -25,7 +25,7 @@
                         <input type="password" name="password">
                     </td>
                     <td class="error">
-                        {{password_err}}
+                        {{password_verify}}
                     </td>
                 </tr>
                 <tr>
@@ -36,7 +36,7 @@
                         <input type="password" name="verify">
                     </td>
                     <td class="error">
-                        {{verify_err}}
+                        {{password_retype}}
                     </td>
                 </tr>
                 <tr>
@@ -44,10 +44,10 @@
                         Email (optional)
                     </td>
                     <td>
-                        <input type="text" name="email">
+                        <input type="text" name="email" value="{{email}}">
                     </td>
                     <td class="error">
-                        {{email_err}}
+                        {{email_verify}}
                     </td>
                 </tr>
             </tbody>
