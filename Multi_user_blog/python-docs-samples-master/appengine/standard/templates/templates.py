@@ -84,16 +84,26 @@ class SignupHandler(Handler):
         email_verify = signup.valid_email(email)
         retype_password = signup.password_retype(password, verify)
 
-        self.render("signup.html", username=username,
-                                   email=email,
-                                   username_verify=username_verify,
-                                   password_verify=password_verify,
-                                   email_verify=email_verify,
-                                   retype_password=retype_password)
+        if not(username_verify and password_verify and retype_password and email_verify):
+            self.render("signup.html", username=username,
+                                       email=email,
+                                       username_verify=username_verify,
+                                       password_verify=password_verify,
+                                       email_verify=email_verify,
+                                       retype_password=retype_password)
+        else:
+            self.redirect("/loged", username_verify)
+
+
+class LogedinHandler(Handler):
+    def get(self):
+        username = self.request.get('username_verify')
+        self.render("loged.html", username=username)
 
 
 app = webapp2.WSGIApplication([('/', MainPage),
                                ('/fizzbuzz', FizzBuzzHandler),
                                ('/rot13', Rot13Handler),
                                ('/signup', SignupHandler),
+                               ('/loged', LogedinHandler),
                                ], debug=True)
