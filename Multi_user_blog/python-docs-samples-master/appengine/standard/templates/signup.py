@@ -6,7 +6,7 @@ PASSWORD_RE = re.compile(r"^.{3,20}$")
 EMAIL_RE = re.compile(r"^[\S]+@[\S]+.[\S]+$")
 
 def valid_username(username):
-    return USER_RE.match(username)
+    return USER_RE.match(username) 
 
 def valid_password(password):
     return PASSWORD_RE.match(password)

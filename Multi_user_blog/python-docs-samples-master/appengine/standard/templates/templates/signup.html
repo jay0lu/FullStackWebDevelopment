@@ -14,7 +14,9 @@
                         <input type="text" name="username" value="{{username}}">
                     </td>
                     <td class="error">
-                        {{username_verify}}
+                        {% if not username_verify %}
+                            User name not valid.
+                        {% endif %}
                     </td>
                 </tr>
                 <tr>
@@ -25,7 +27,9 @@
                         <input type="password" name="password">
                     </td>
                     <td class="error">
-                        {{password_verify}}
+                        {% if not password_verify %}
+                            Password is not valid.
+                        {% endif %}
                     </td>
                 </tr>
                 <tr>
@@ -36,7 +40,9 @@
                         <input type="password" name="verify">
                     </td>
                     <td class="error">
-                        {{password_retype}}
+                        {% if not retype_password %}
+                            Please confirm the password.
+                        {% endif %}
                     </td>
                 </tr>
                 <tr>
@@ -47,7 +53,9 @@
                         <input type="text" name="email" value="{{email}}">
                     </td>
                     <td class="error">
-                        {{email_verify}}
+                        {% if not email_verify %}
+                            Email is not valid.
+                        {% endif %}
                     </td>
                 </tr>
             </tbody>
