@@ -92,12 +92,12 @@ class SignupHandler(Handler):
                                        email_verify=email_verify,
                                        retype_password=retype_password)
         else:
-            self.redirect("/loged", username_verify)
+            self.redirect('/loged?username=' + username)
 
 
 class LogedinHandler(Handler):
     def get(self):
-        username = self.request.get('username_verify')
+        username = self.request.get('username')
         self.render("loged.html", username=username)
 
 
