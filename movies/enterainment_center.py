@@ -52,7 +52,3 @@ print(the_matrix.title)
 print(media.Movie.__doc__)
 print(media.Movie.__name__)
 print(media.Movie.__module__)
-=======
-# print(media.Movie.__doc__)
-# print(media.Movie.__name__)
-# print(media.Movie.__module__)
